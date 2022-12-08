@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AEConsoleDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-Sq-dqm">
+                                <rect key="frame" x="84.5" y="218.5" width="206" height="30"/>
+                                <state key="normal" title="Log Random Number Of Lines"/>
+                                <connections>
+                                    <action selector="didTapLogButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ms5-sa-FVi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can also toggle Console UI with a shake gesture. Go ahead, shake it!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsn-kt-aD7">
+                                <rect key="frame" x="46" y="428.5" width="279" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzu-IB-8wu">
+                                <rect key="frame" x="125" y="378.5" width="125" height="30"/>
+                                <state key="normal" title="Toggle Console UI"/>
+                                <connections>
+                                    <action selector="didTapToggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mev-AT-n6a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XAf-Sq-dqm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="B6D-Jk-jcV"/>
+                            <constraint firstItem="Nsn-kt-aD7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="LNA-Ge-NiC"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Nsn-kt-aD7" secondAttribute="trailing" constant="30" id="MBx-3D-5xN"/>
+                            <constraint firstItem="mzu-IB-8wu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="lVP-hG-TB0"/>
+                            <constraint firstItem="mzu-IB-8wu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mbl-9r-Mtj"/>
+                            <constraint firstItem="Nsn-kt-aD7" firstAttribute="top" secondItem="mzu-IB-8wu" secondAttribute="bottom" constant="20" id="yCf-5d-BSd"/>
+                            <constraint firstItem="XAf-Sq-dqm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zhQ-XV-Zqr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="657"/>
+        </scene>
+    </scenes>
+</document>
