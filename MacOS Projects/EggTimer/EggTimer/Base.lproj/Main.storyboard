@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="EggTimer" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="EggTimer" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About EggTimer" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="jxe-Wd-VWD" kind="show" id="Nh9-0i-xis"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide EggTimer" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit EggTimer" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Timer" id="IEC-nJ-ORx">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Timer" id="sNK-Am-YAn">
+                                    <items>
+                                        <menuItem title="Start" keyEquivalent="s" id="wyz-5u-nWK">
+                                            <connections>
+                                                <action selector="startTimerMenuItemSelected:" target="Ady-hI-5gd" id="HzT-uy-wB9"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Stop" keyEquivalent="x" id="4P7-0Q-Cc9">
+                                            <connections>
+                                                <action selector="stopTimerMenuItemSelected:" target="Ady-hI-5gd" id="ded-ba-fsJ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Reset" keyEquivalent="r" id="lgl-NN-17b">
+                                            <connections>
+                                                <action selector="resetTimerMenuItemSelected:" target="Ady-hI-5gd" id="Eos-aB-UL8"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="EggTimer Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="EggTimer" customModuleProvider="target">
+                    <connections>
+                        <outlet property="resetTimerMenuItem" destination="lgl-NN-17b" id="zGf-K0-FkR"/>
+                        <outlet property="startTimerMenuItem" destination="wyz-5u-nWK" id="HwU-zm-4eS"/>
+                        <outlet property="stopTimerMenuItem" destination="4P7-0Q-Cc9" id="okv-cc-XX1"/>
+                    </connections>
+                </customObject>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="Ma4-8a-QLM">
+            <objects>
+                <windowController id="jxe-Wd-VWD" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="8tR-eV-JnV">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="268" y="340" width="416" height="214"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1792" height="1120"/>
+                        <view key="contentView" id="kmR-SW-qHu">
+                            <rect key="frame" x="0.0" y="0.0" width="416" height="214"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="jxe-Wd-VWD" id="AtP-dQ-qVU"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="bsT-UH-mvF" kind="relationship" relationship="window.shadowedContentViewController" id="HwE-1C-td2"/>
+                    </connections>
+                </windowController>
+                <customObject id="iQa-MU-jB5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="332"/>
+        </scene>
+        <!--Prefs View Controller-->
+        <scene sceneID="DKV-X2-SeR">
+            <objects>
+                <viewController id="bsT-UH-mvF" customClass="PrefsViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="lgt-6c-0V2">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="222"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-a8-tIj">
+                                <rect key="frame" x="18" y="176" width="380" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Preset Egg Timings:" id="20q-KB-8tN">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-PS-UzM">
+                                <rect key="frame" x="17" y="132" width="383" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="For custardy yet firm soft-boiled eggs: 6 minutes" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="6" imageScaling="proportionallyDown" inset="2" selectedItem="bsR-gG-hbv" id="G7k-ht-qrm">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="mjR-dt-vsD">
+                                        <items>
+                                            <menuItem title="For runny soft-boiled eggs (barely set whites): 3 minutes" tag="3" id="UCS-6h-j9L"/>
+                                            <menuItem title="For slightly runny soft-boiled eggs: 4 minutes" tag="4" id="73J-Ua-oxC"/>
+                                            <menuItem title="For custardy yet firm soft-boiled eggs: 6 minutes" state="on" tag="6" id="bsR-gG-hbv"/>
+                                            <menuItem title="For firm yet still creamy hard-boiled eggs: 10 minutes" tag="10" id="w2n-d5-qEm">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="For very firm hard-boiled eggs: 15 minutes" tag="15" id="chV-aO-Vne">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem isSeparatorItem="YES" id="ir1-1J-JYz"/>
+                                            <menuItem title="Custom" id="ypm-E5-s1K">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="popupValueChanged:" target="bsT-UH-mvF" id="ww3-rP-2sF"/>
+                                </connections>
+                            </popUpButton>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="firstBaseline" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8z-Of-2j1">
+                                <rect key="frame" x="20" y="100" width="376" height="16"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bw5-je-DNt">
+                                        <rect key="frame" x="-2" y="0.0" width="187" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Custom Egg Timing:" id="juW-jU-cyH">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OGU-tA-esF">
+                                        <rect key="frame" x="191" y="0.0" width="187" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="6 minutes" id="qXv-eU-cTj">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MJJ-xj-YqH">
+                                <rect key="frame" x="352" y="13" width="51" height="32"/>
+                                <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7RC-hD-scQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <color key="bezelColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="okButtonClicked:" target="bsT-UH-mvF" id="jKj-nL-84e"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-Rc-CD0">
+                                <rect key="frame" x="13" y="13" width="76" height="32"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DdP-Eh-BEf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" target="bsT-UH-mvF" id="pqa-Di-Jge"/>
+                                </connections>
+                            </button>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="haq-N7-Gt0">
+                                <rect key="frame" x="18" y="54" width="380" height="28"/>
+                                <sliderCell key="cell" enabled="NO" state="on" alignment="left" minValue="1" maxValue="25" doubleValue="6" tickMarkPosition="above" numberOfTickMarks="25" sliderType="linear" id="PRe-dr-FPl"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" target="bsT-UH-mvF" id="Spe-ch-UbQ"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="PYo-Rc-CD0" firstAttribute="top" secondItem="haq-N7-Gt0" secondAttribute="bottom" constant="20" id="2aM-MI-MEW"/>
+                            <constraint firstAttribute="trailing" secondItem="HDS-PS-UzM" secondAttribute="trailing" constant="20" id="2q9-ET-6ga"/>
+                            <constraint firstItem="HDS-PS-UzM" firstAttribute="top" secondItem="ldi-a8-tIj" secondAttribute="bottom" constant="20" id="7e7-cE-JRc"/>
+                            <constraint firstItem="i8z-Of-2j1" firstAttribute="top" secondItem="HDS-PS-UzM" secondAttribute="bottom" constant="20" id="FED-WG-QdI"/>
+                            <constraint firstItem="MJJ-xj-YqH" firstAttribute="top" secondItem="haq-N7-Gt0" secondAttribute="bottom" constant="20" id="FbH-YY-V8D"/>
+                            <constraint firstItem="ldi-a8-tIj" firstAttribute="leading" secondItem="lgt-6c-0V2" secondAttribute="leading" constant="20" id="KlO-0k-rNj"/>
+                            <constraint firstItem="ldi-a8-tIj" firstAttribute="top" secondItem="lgt-6c-0V2" secondAttribute="top" constant="30" id="NTb-gG-YRC"/>
+                            <constraint firstItem="PYo-Rc-CD0" firstAttribute="leading" secondItem="lgt-6c-0V2" secondAttribute="leading" constant="20" id="VkW-lc-UQN"/>
+                            <constraint firstAttribute="trailing" secondItem="haq-N7-Gt0" secondAttribute="trailing" constant="20" id="Zjm-Tm-J0D"/>
+                            <constraint firstAttribute="trailing" secondItem="MJJ-xj-YqH" secondAttribute="trailing" constant="20" id="blP-ox-T7t"/>
+                            <constraint firstItem="HDS-PS-UzM" firstAttribute="leading" secondItem="lgt-6c-0V2" secondAttribute="leading" constant="20" id="c6f-Cx-GVu"/>
+                            <constraint firstItem="haq-N7-Gt0" firstAttribute="leading" secondItem="lgt-6c-0V2" secondAttribute="leading" constant="20" id="fXv-Oe-hr1"/>
+                            <constraint firstItem="i8z-Of-2j1" firstAttribute="leading" secondItem="lgt-6c-0V2" secondAttribute="leading" constant="20" id="fdI-W7-LxM"/>
+                            <constraint firstAttribute="trailing" secondItem="i8z-Of-2j1" secondAttribute="trailing" constant="20" id="jPY-b8-Alf"/>
+                            <constraint firstItem="haq-N7-Gt0" firstAttribute="top" secondItem="i8z-Of-2j1" secondAttribute="bottom" constant="20" id="pQh-tD-VPu"/>
+                            <constraint firstAttribute="trailing" secondItem="ldi-a8-tIj" secondAttribute="trailing" constant="20" id="pVS-B9-f95"/>
+                            <constraint firstAttribute="bottom" secondItem="PYo-Rc-CD0" secondAttribute="bottom" constant="20" symbolic="YES" id="tj8-IF-2I0"/>
+                            <constraint firstAttribute="bottom" secondItem="MJJ-xj-YqH" secondAttribute="bottom" constant="20" id="x7t-dz-ITZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customSlider" destination="haq-N7-Gt0" id="XY3-b4-SYp"/>
+                        <outlet property="customTextField" destination="OGU-tA-esF" id="0YN-SV-M3V"/>
+                        <outlet property="presetsPopup" destination="HDS-PS-UzM" id="4vn-2V-l63"/>
+                    </connections>
+                </viewController>
+                <customObject id="QSU-U1-j1n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="320"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="EggTimer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName=" EggTimerMainWindow" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="346" height="471"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="346" height="471"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="350"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="346" height="471"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="49" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHX-Nd-h07">
+                                <rect key="frame" x="20" y="80" width="306" height="371"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mo1-d1-ATO">
+                                        <rect key="frame" x="52" y="251" width="203" height="120"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="6:00" id="SmJ-s9-yRx">
+                                            <font key="font" size="100" name="Helvetica"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZh-xf-Gug">
+                                        <rect key="frame" x="20" y="0.0" width="266" height="202"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="stopped" id="fWv-1e-W8P"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XZh-xf-Gug" secondAttribute="trailing" constant="20" symbolic="YES" id="4SH-kh-cAB"/>
+                                    <constraint firstItem="XZh-xf-Gug" firstAttribute="leading" secondItem="KHX-Nd-h07" secondAttribute="leading" constant="20" symbolic="YES" id="pUq-K5-otL"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23Q-cw-Leb">
+                                <rect key="frame" x="0.0" y="0.0" width="346" height="60"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ND-F4-sl1">
+                                        <rect key="frame" x="0.0" y="-1" width="115" height="62"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Starrt" bezelStyle="smallSquare" image="NSAddTemplate" catalog="system" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="igK-Fi-tAX">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="startTimerMenuItemSelected:" target="XfG-lQ-9wD" id="hgG-7G-om4"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="95d-ak-XJa">
+                                        <rect key="frame" x="115" y="-1" width="116" height="62"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" image="NSAddTemplate" catalog="system" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EJg-oy-wdu">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="stopTimerMenuItemSelected:" target="XfG-lQ-9wD" id="sPr-23-hLa"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HFg-Eo-TxO">
+                                        <rect key="frame" x="231" y="-1" width="115" height="62"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" image="NSAddTemplate" catalog="system" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O8l-Zz-vqd">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="resetTimerMenuItemSelected:" target="XfG-lQ-9wD" id="gwA-ef-cnc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="95d-ak-XJa" firstAttribute="height" secondItem="23Q-cw-Leb" secondAttribute="height" id="Epw-xv-TXg"/>
+                                    <constraint firstItem="4ND-F4-sl1" firstAttribute="height" secondItem="23Q-cw-Leb" secondAttribute="height" id="Y8Z-fb-27q"/>
+                                    <constraint firstItem="HFg-Eo-TxO" firstAttribute="height" secondItem="23Q-cw-Leb" secondAttribute="height" id="nyM-Bt-uYG"/>
+                                    <constraint firstAttribute="height" constant="60" id="rnA-5b-9WA"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="23Q-cw-Leb" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="C23-QH-gfl"/>
+                            <constraint firstItem="KHX-Nd-h07" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="JWl-oS-nzA"/>
+                            <constraint firstItem="23Q-cw-Leb" firstAttribute="top" secondItem="KHX-Nd-h07" secondAttribute="bottom" constant="20" id="XDn-R0-YAu"/>
+                            <constraint firstItem="KHX-Nd-h07" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fMC-Ec-zIa"/>
+                            <constraint firstAttribute="trailing" secondItem="23Q-cw-Leb" secondAttribute="trailing" id="gZU-nh-byD"/>
+                            <constraint firstAttribute="trailing" secondItem="KHX-Nd-h07" secondAttribute="trailing" constant="20" id="jdA-2H-Qeu"/>
+                            <constraint firstAttribute="bottom" secondItem="23Q-cw-Leb" secondAttribute="bottom" id="qa8-9a-lRU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eggImageView" destination="XZh-xf-Gug" id="wf1-Wl-Lsd"/>
+                        <outlet property="timeLeftField" destination="mo1-d1-ATO" id="6Ge-Fs-gK1"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="998.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSAddTemplate" catalog="system" width="18" height="17"/>
+        <image name="stopped" width="128" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
