@@ -319,10 +319,10 @@ Gw
             </objects>
             <point key="canvasLocation" x="54" y="350"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="TimerViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="346" height="471"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -361,32 +361,32 @@ Gw
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ND-F4-sl1">
                                         <rect key="frame" x="0.0" y="-1" width="115" height="62"/>
-                                        <buttonCell key="cell" type="smallSquare" title="Starrt" bezelStyle="smallSquare" image="NSAddTemplate" catalog="system" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="igK-Fi-tAX">
+                                        <buttonCell key="cell" type="smallSquare" title="Starrt" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="igK-Fi-tAX">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="startTimerMenuItemSelected:" target="XfG-lQ-9wD" id="hgG-7G-om4"/>
+                                            <action selector="startButtonClicked:" target="rPt-NT-nkU" id="wfS-by-6Pu"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="95d-ak-XJa">
                                         <rect key="frame" x="115" y="-1" width="116" height="62"/>
-                                        <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" image="NSAddTemplate" catalog="system" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EJg-oy-wdu">
+                                        <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EJg-oy-wdu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <connections>
+                                                <action selector="stopButtonClicked:" target="rPt-NT-nkU" id="Up4-Eo-haE"/>
+                                            </connections>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="stopTimerMenuItemSelected:" target="XfG-lQ-9wD" id="sPr-23-hLa"/>
-                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HFg-Eo-TxO">
                                         <rect key="frame" x="231" y="-1" width="115" height="62"/>
-                                        <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" image="NSAddTemplate" catalog="system" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O8l-Zz-vqd">
+                                        <buttonCell key="cell" type="smallSquare" title="Reset" bezelStyle="smallSquare" image="NSAddTemplate" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="O8l-Zz-vqd">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="resetTimerMenuItemSelected:" target="XfG-lQ-9wD" id="gwA-ef-cnc"/>
+                                            <action selector="resetButtonClicked:" target="rPt-NT-nkU" id="4KD-nc-uyM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -420,6 +420,9 @@ Gw
                     </view>
                     <connections>
                         <outlet property="eggImageView" destination="XZh-xf-Gug" id="wf1-Wl-Lsd"/>
+                        <outlet property="resetButton" destination="HFg-Eo-TxO" id="TlN-4I-xvI"/>
+                        <outlet property="startButton" destination="4ND-F4-sl1" id="kkh-xl-gg0"/>
+                        <outlet property="stopButton" destination="95d-ak-XJa" id="vzj-y6-R7V"/>
                         <outlet property="timeLeftField" destination="mo1-d1-ATO" id="6Ge-Fs-gK1"/>
                     </connections>
                 </viewController>
@@ -429,7 +432,7 @@ Gw
         </scene>
     </scenes>
     <resources>
-        <image name="NSAddTemplate" catalog="system" width="18" height="17"/>
+        <image name="NSAddTemplate" width="18" height="17"/>
         <image name="stopped" width="128" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

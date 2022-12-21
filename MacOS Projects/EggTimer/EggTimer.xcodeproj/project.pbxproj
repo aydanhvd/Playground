@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		958DB03C2950792400074176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB03B2950792400074176 /* AppDelegate.swift */; };
-		958DB03E2950792400074176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB03D2950792400074176 /* ViewController.swift */; };
+		958DB03E2950792400074176 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB03D2950792400074176 /* TimerViewController.swift */; };
 		958DB0402950792600074176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958DB03F2950792600074176 /* Assets.xcassets */; };
 		958DB0432950792600074176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958DB0412950792600074176 /* Main.storyboard */; };
 		958DB04E2950792600074176 /* EggTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB04D2950792600074176 /* EggTimerTests.swift */; };
 		958DB0582950792600074176 /* EggTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB0572950792600074176 /* EggTimerUITests.swift */; };
 		958DB05A2950792600074176 /* EggTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB0592950792600074176 /* EggTimerUITestsLaunchTests.swift */; };
 		95A861902950B3D100D8D8CC /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8618F2950B3D100D8D8CC /* PrefsViewController.swift */; };
+		95A861942952EB6B00D8D8CC /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A861932952EB6B00D8D8CC /* EggTimer.swift */; };
+		95A861962953264C00D8D8CC /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A861952953264C00D8D8CC /* Preferences.swift */; };
+		95A86198295331DB00D8D8CC /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95A86197295331DB00D8D8CC /* ding.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		958DB0382950792400074176 /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958DB03B2950792400074176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		958DB03D2950792400074176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		958DB03D2950792400074176 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		958DB03F2950792600074176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		958DB0422950792600074176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		958DB0442950792600074176 /* EggTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggTimer.entitlements; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		958DB0572950792600074176 /* EggTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimerUITests.swift; sourceTree = "<group>"; };
 		958DB0592950792600074176 /* EggTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		95A8618F2950B3D100D8D8CC /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		95A861932952EB6B00D8D8CC /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		95A861952953264C00D8D8CC /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		95A86197295331DB00D8D8CC /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +103,12 @@
 		958DB03A2950792400074176 /* EggTimer */ = {
 			isa = PBXGroup;
 			children = (
+				95A861922952EADC00D8D8CC /* Model */,
+				95A861912952EAB500D8D8CC /* View Controllers */,
 				958DB03B2950792400074176 /* AppDelegate.swift */,
-				958DB03D2950792400074176 /* ViewController.swift */,
 				958DB03F2950792600074176 /* Assets.xcassets */,
 				958DB0412950792600074176 /* Main.storyboard */,
-				95A8618F2950B3D100D8D8CC /* PrefsViewController.swift */,
+				95A86197295331DB00D8D8CC /* ding.mp3 */,
 				958DB0442950792600074176 /* EggTimer.entitlements */,
 			);
 			path = EggTimer;
@@ -122,6 +129,24 @@
 				958DB0592950792600074176 /* EggTimerUITestsLaunchTests.swift */,
 			);
 			path = EggTimerUITests;
+			sourceTree = "<group>";
+		};
+		95A861912952EAB500D8D8CC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				958DB03D2950792400074176 /* TimerViewController.swift */,
+				95A8618F2950B3D100D8D8CC /* PrefsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		95A861922952EADC00D8D8CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95A861932952EB6B00D8D8CC /* EggTimer.swift */,
+				95A861952953264C00D8D8CC /* Preferences.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +255,7 @@
 			files = (
 				958DB0402950792600074176 /* Assets.xcassets in Resources */,
 				958DB0432950792600074176 /* Main.storyboard in Resources */,
+				95A86198295331DB00D8D8CC /* ding.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958DB03E2950792400074176 /* ViewController.swift in Sources */,
+				958DB03E2950792400074176 /* TimerViewController.swift in Sources */,
+				95A861942952EB6B00D8D8CC /* EggTimer.swift in Sources */,
+				95A861962953264C00D8D8CC /* Preferences.swift in Sources */,
 				95A861902950B3D100D8D8CC /* PrefsViewController.swift in Sources */,
 				958DB03C2950792400074176 /* AppDelegate.swift in Sources */,
 			);
