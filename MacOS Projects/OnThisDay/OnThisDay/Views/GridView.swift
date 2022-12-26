@@ -2,7 +2,8 @@
 //  GridView.swift
 //  GridView
 //
-//  Created by Aydan Haqverdili on 12/19/22.
+//  Created by Aydan Haqverdili on 12/26/22.
+//  Copyright © 2022 Aydan Haqverdili. All rights reserved.
 //
 
 import SwiftUI

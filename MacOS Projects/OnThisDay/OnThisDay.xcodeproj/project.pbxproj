@@ -21,6 +21,8 @@
 		26C9722E26D728AC00C9FAD2 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C9722D26D728AC00C9FAD2 /* GridView.swift */; };
 		26F7306026D7235A008D7B1F /* SampleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7305F26D7235A008D7B1F /* SampleEvent.swift */; };
 		26F7306226D723B5008D7B1F /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7306126D723B5008D7B1F /* EventView.swift */; };
+		95D8F3F7295988FF0035164B /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F3F6295988FF0035164B /* Menus.swift */; };
+		95D8F3F929598A440035164B /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F3F829598A440035164B /* DisplayMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		26C9722D26D728AC00C9FAD2 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		26F7305F26D7235A008D7B1F /* SampleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleEvent.swift; sourceTree = "<group>"; };
 		26F7306126D723B5008D7B1F /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		95D8F3F6295988FF0035164B /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Menus.swift; path = "../../../../../../.Trash/02-working-with-windows/projects/final/OnThisDay/Models/Menus.swift"; sourceTree = "<group>"; };
+		95D8F3F829598A440035164B /* DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMode.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 				26AE663D26D7174400C1D5DA /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		26AE663D26D7174400C1D5DA /* Products */ = {
 			isa = PBXGroup;
@@ -75,6 +80,7 @@
 				26AE663F26D7174400C1D5DA /* OnThisDayApp.swift */,
 				26F7306326D723C7008D7B1F /* Views */,
 				26AE664D26D7190B00C1D5DA /* Models */,
+				95D8F3F5295988EF0035164B /* Commands */,
 				26AE665626D7191500C1D5DA /* Utilities */,
 				26AE664326D7174500C1D5DA /* Assets.xcassets */,
 				26C9722C26D7272D00C9FAD2 /* OnThisDay.entitlements */,
@@ -99,6 +105,7 @@
 				26AE664F26D7190B00C1D5DA /* Event.swift */,
 				26AE665026D7190B00C1D5DA /* EventLink.swift */,
 				26AE665126D7190B00C1D5DA /* Day.swift */,
+				95D8F3F829598A440035164B /* DisplayMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +128,14 @@
 				26C9722D26D728AC00C9FAD2 /* GridView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		95D8F3F5295988EF0035164B /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				95D8F3F6295988FF0035164B /* Menus.swift */,
+			);
+			path = Commands;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +168,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1310;
-				ORGANIZATIONNAME = "Ray Wenderlich";
+				ORGANIZATIONNAME = "Aydan Haqverdili";
 				TargetAttributes = {
 					26AE663B26D7174400C1D5DA = {
 						CreatedOnToolsVersion = 13.0;
@@ -216,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F7306026D7235A008D7B1F /* SampleEvent.swift in Sources */,
+				95D8F3F929598A440035164B /* DisplayMode.swift in Sources */,
 				26AE665926D7191500C1D5DA /* String_decoded.swift in Sources */,
 				26F7306226D723B5008D7B1F /* EventView.swift in Sources */,
+				95D8F3F7295988FF0035164B /* Menus.swift in Sources */,
 				26AE665326D7190B00C1D5DA /* Event.swift in Sources */,
 				26AE665226D7190B00C1D5DA /* AppState.swift in Sources */,
 				26AE665A26D7191500C1D5DA /* Networker.swift in Sources */,
@@ -354,11 +371,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = OnThisDay/OnThisDay.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OnThisDay/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = YK898TYS2N;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -370,8 +389,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.OnThisDay;
+				PRODUCT_BUNDLE_IDENTIFIER = "aydan.haqverdili-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -383,11 +403,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = OnThisDay/OnThisDay.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OnThisDay/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = YK898TYS2N;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -399,8 +422,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.OnThisDay;
+				PRODUCT_BUNDLE_IDENTIFIER = "aydan.haqverdili-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};

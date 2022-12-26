@@ -2,23 +2,32 @@
 //  SidebarView.swift
 //  SidebarView
 //
-//  Created by Aydan Haqverdili on 12/19/22.
+//  Created by Aydan Haqverdili on 12/26/22.
+//  Copyright © 2022 Aydan Haqverdili. All rights reserved.
 //
+
 import SwiftUI
 
 struct SidebarView: View {
-  @Binding var selection: EventType?
+    @Binding var selection: EventType?
+    @EnvironmentObject var appState: AppState
+    @AppStorage("showTotals") var showTotals = true
 
-  var body: some View {
-    List(selection: $selection) {
-      Section("TODAY") {
-        ForEach(EventType.allCases, id: \.self) { type in
-          Text(type.rawValue)
+    var body: some View {
+        List(selection: $selection) {
+            Section("TODAY") {
+                ForEach(EventType.allCases, id: \.self) { type in
+                    Text(type.rawValue)
+                        .badge(
+                            showTotals
+                            ? appState.countFor(eventType: type)
+                            : 0
+                        )
+                }
+            }
         }
-      }
+        .listStyle(.sidebar)
     }
-    .listStyle(.sidebar)
-  }
 }
 
 struct SidebarView_Previews: PreviewProvider {
