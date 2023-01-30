@@ -32,7 +32,11 @@ class AppState: ObservableObject {
   ///   - date: optional display date e.g. "June 29", uses today's date if not supplied
   ///   - searchText: optional search string to restrict the events returned
   /// - Returns: an array of `Event` objects
-  func dataFor(eventType: EventType?, date: String? = nil, searchText: String = "") -> [Event] {
+  func dataFor(
+    eventType: EventType?,
+    date: String? = nil,
+    searchText: String = ""
+  ) -> [Event] {
     let requestedDate = date ?? today
     if let day = days[requestedDate] {
       let events: [Event]
@@ -70,8 +74,16 @@ class AppState: ObservableObject {
   ///   - date: optional display date e.g. "June 29", uses today's date if not supplied
   ///   - searchText: optional search string to restrict the events returned
   /// - Returns: An integer
-  func countFor(eventType: EventType = .events, date: String? = nil, searchText: String = "") -> Int {
-    let events = dataFor(eventType: eventType, date: date, searchText: searchText)
+  func countFor(
+    eventType: EventType = .events,
+    date: String? = nil,
+    searchText: String = ""
+  ) -> Int {
+    let events = dataFor(
+        eventType: eventType,
+        date: date,
+        searchText: searchText
+    )
     return events.count
   }
 

@@ -21,7 +21,8 @@
 		26C9722E26D728AC00C9FAD2 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C9722D26D728AC00C9FAD2 /* GridView.swift */; };
 		26F7306026D7235A008D7B1F /* SampleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7305F26D7235A008D7B1F /* SampleEvent.swift */; };
 		26F7306226D723B5008D7B1F /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7306126D723B5008D7B1F /* EventView.swift */; };
-		95D8F3F7295988FF0035164B /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F3F6295988FF0035164B /* Menus.swift */; };
+		959AAA972959A4DE000C2C98 /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AAA962959A4DE000C2C98 /* Menus.swift */; };
+		959AAA992959AD85000C2C98 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AAA982959AD85000C2C98 /* Toolbar.swift */; };
 		95D8F3F929598A440035164B /* DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8F3F829598A440035164B /* DisplayMode.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +43,8 @@
 		26C9722D26D728AC00C9FAD2 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		26F7305F26D7235A008D7B1F /* SampleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleEvent.swift; sourceTree = "<group>"; };
 		26F7306126D723B5008D7B1F /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
-		95D8F3F6295988FF0035164B /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Menus.swift; path = "../../../../../../.Trash/02-working-with-windows/projects/final/OnThisDay/Models/Menus.swift"; sourceTree = "<group>"; };
+		959AAA962959A4DE000C2C98 /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
+		959AAA982959AD85000C2C98 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		95D8F3F829598A440035164B /* DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMode.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -80,7 +82,7 @@
 				26AE663F26D7174400C1D5DA /* OnThisDayApp.swift */,
 				26F7306326D723C7008D7B1F /* Views */,
 				26AE664D26D7190B00C1D5DA /* Models */,
-				95D8F3F5295988EF0035164B /* Commands */,
+				95D8F3F5295988EF0035164B /* Controls */,
 				26AE665626D7191500C1D5DA /* Utilities */,
 				26AE664326D7174500C1D5DA /* Assets.xcassets */,
 				26C9722C26D7272D00C9FAD2 /* OnThisDay.entitlements */,
@@ -130,12 +132,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		95D8F3F5295988EF0035164B /* Commands */ = {
+		95D8F3F5295988EF0035164B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				95D8F3F6295988FF0035164B /* Menus.swift */,
+				959AAA962959A4DE000C2C98 /* Menus.swift */,
+				959AAA982959AD85000C2C98 /* Toolbar.swift */,
 			);
-			path = Commands;
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +170,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Aydan Haqverdili";
 				TargetAttributes = {
 					26AE663B26D7174400C1D5DA = {
@@ -234,14 +237,15 @@
 				95D8F3F929598A440035164B /* DisplayMode.swift in Sources */,
 				26AE665926D7191500C1D5DA /* String_decoded.swift in Sources */,
 				26F7306226D723B5008D7B1F /* EventView.swift in Sources */,
-				95D8F3F7295988FF0035164B /* Menus.swift in Sources */,
 				26AE665326D7190B00C1D5DA /* Event.swift in Sources */,
 				26AE665226D7190B00C1D5DA /* AppState.swift in Sources */,
 				26AE665A26D7191500C1D5DA /* Networker.swift in Sources */,
 				26AE665526D7190B00C1D5DA /* Day.swift in Sources */,
 				26AE665C26D71EFC00C1D5DA /* SidebarView.swift in Sources */,
 				26AE664226D7174400C1D5DA /* ContentView.swift in Sources */,
+				959AAA972959A4DE000C2C98 /* Menus.swift in Sources */,
 				26AE665426D7190B00C1D5DA /* EventLink.swift in Sources */,
+				959AAA992959AD85000C2C98 /* Toolbar.swift in Sources */,
 				26C9722E26D728AC00C9FAD2 /* GridView.swift in Sources */,
 				26AE664026D7174400C1D5DA /* OnThisDayApp.swift in Sources */,
 			);
@@ -284,6 +288,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -345,6 +350,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -375,10 +381,12 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"OnThisDay/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = YK898TYS2N;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -408,10 +416,12 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"OnThisDay/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = YK898TYS2N;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;

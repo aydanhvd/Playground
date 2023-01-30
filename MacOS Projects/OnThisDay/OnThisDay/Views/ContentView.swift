@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @EnvironmentObject var appState: AppState
   @State private var eventType: EventType? = .events
+  @State private var searchText = ""
 
   var body: some View {
     NavigationView {
@@ -22,12 +23,22 @@ struct ContentView: View {
       maxWidth: .infinity,
       minHeight: 400,
       idealHeight: 800,
-      maxHeight: .infinity)
+      maxHeight: .infinity
+    )
+    .toolbar(id: "mainToolbar"){
+        ToolBar()
+    }
+    .searchable(text: $searchText)
     .navigationTitle(windowTitle)
+
   }
 
   var events: [Event] {
-    appState.dataFor(eventType: eventType)
+   let events = appState.dataFor(
+        eventType: eventType,
+        searchText: searchText
+    )
+      return events
   }
 
   var windowTitle: String {
@@ -35,11 +46,5 @@ struct ContentView: View {
       return "On This Day - \(eventType.rawValue)"
     }
     return "On This Day"
-  }
-}
-
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
   }
 }
