@@ -5,11 +5,11 @@ QT += location
 CONFIG += mobility
 
 SOURCES += \
-        Controllers/system.cpp \
         main.cpp
 
-resources.files = main.qml
+resources.files = main.qml 
 resources.prefix = /$${TARGET}
+
 RESOURCES += resources \
     main.qrc
 
@@ -25,7 +25,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    ui/BottomBar/BottomBar.qml
-
-HEADERS += \
-    Controllers/system.h
+    ui/TabBar/TabBar.qml
