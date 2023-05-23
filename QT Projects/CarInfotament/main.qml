@@ -1,5 +1,4 @@
 import QtQuick
-import "ui/TabBar"
 
 Window {
     width: 1280
@@ -7,7 +6,15 @@ Window {
     visible: true
     title: qsTr("CarInfotament")
 
-    TabBar {
+    TabBar {  // @disable-check M300
         id: tabBar
+    }
+
+    LeftScreen {  // @disable-check M300
+        id: leftScreen
+    }
+
+    RightScreen {  // @disable-check M300
+        id: rightScreen
     }
 }
