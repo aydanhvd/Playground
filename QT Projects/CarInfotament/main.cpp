@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
     engine.load(url);
 
     QQmlContext * context( engine.rootContext() );
-    context -> setContextProperty( "systemHandler", &m_systemHandler );
-    context -> setContextProperty( "driverHVAC", &m_driverHVACHandler );
-    context -> setContextProperty( "passengerHVAC", &m_passengerVACHandler );
+    context->setContextProperty( "systemHandler", &m_systemHandler );
+    context->setContextProperty( "driverHVAC", &m_driverHVACHandler );
+    context->setContextProperty( "passengerHVAC", &m_passengerVACHandler );
 
     return app.exec();
 }
