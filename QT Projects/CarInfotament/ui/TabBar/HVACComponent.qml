@@ -4,6 +4,8 @@ Item {
     property string fontColor: "#f0eded"
     property var hvacController
 
+    width: 90 * ( parent.width / 1280 )
+
     Rectangle {
         id: decrementButton
         anchors {

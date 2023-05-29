@@ -2,12 +2,32 @@ import QtQuick
 
 Item {
     property string fontColor: "#f0eded"
+    width: 120 * ( parent.width / 1280 )
+
+    Connections {
+        target:  audioController
+
+        function onVolumeLevelChanged() {
+           visibleTimer.stop()
+           volumeIcon.visible  = false
+           visibleTimer.start()
+        }
+    }
+
+    Timer {
+        id: visibleTimer
+        interval: 1000
+        repeat: false
+        onTriggered: {
+            volumeIcon.visible  = true
+        }
+    }
+
 
     Rectangle {
         id: decrementButton
         anchors {
-            right: volumeIcon.left
-            rightMargin: 15
+            left: parent.left
             top: parent.top
             bottom: parent.bottom
         }
@@ -26,26 +46,47 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            //onClicked: hvacController.incrementTargetTemperature(-1)
+            onClicked: audioController.incrementVolume( -1 )
         }
     }
 
     Image {
         id: volumeIcon
         anchors {
-            right: decrementButton.left
-            rightMargin: 15
+            left: decrementButton.right
+            leftMargin: 15
             verticalCenter: parent.verticalCenter
          }
-        source: "qrc:/CarInfotament/audio2.png"
-        height: parent.height * .35
+        source: {
+            if ( audioController.volumeLevel <= 1 )
+                return  "qrc:/CarInfotament/mute.png"
+            else if (  audioController.volumeLevel <= 20 )
+                return "qrc:/CarInfotament/audio1.png"
+            else if (  audioController.volumeLevel <= 30 )
+                return "qrc:/CarInfotament/audio2.png"
+            else
+                return "qrc:/CarInfotament/audio3.png"
+
+        }
+        height: parent.height * .55
         fillMode: Image.PreserveAspectFit
+    }
+
+    Text {
+        id: volumeTextLabel
+        visible: !volumeIcon.visible
+        anchors {
+            centerIn: volumeIcon
+         }
+        color: fontColor
+        font.pixelSize: 24
+        text:  audioController.volumeLevel
     }
 
     Rectangle {
         id: incrementButton
         anchors {
-            left: volumeIcon.right
+            right: parent.right
             top: parent.top
             leftMargin: 15
             bottom: parent.bottom
@@ -65,7 +106,9 @@ Item {
 
         MouseArea {
             anchors.fill: parent
-            //onClicked: hvacController.incrementTargetTemperature(1)
+           onClicked: audioController.incrementVolume( 1 )
         }
     }
 }
+
+

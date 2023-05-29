@@ -2,6 +2,7 @@
 
 AudioController::AudioController(QObject *parent)
     : QObject{parent}
+    , m_volumeLevel( 32 )
 {
 
 }
